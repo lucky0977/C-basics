@@ -1,0 +1,41 @@
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Hello
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //  this is important for debugging. do Not remove 
+            // integer variable
+
+            /* Data types in c#:
+             * integer - int Lucky;------> 4 bytes
+             * Long - long lucky;------> 8 bytes
+             * Floating point number - float that;------> 4 bytes
+             * Double - double Lucky; -----> 8 bytes 
+             * Character - char a = 'A';------> 2 bytes
+             * Boolean - bool inGreaat = true;------> 1 bit
+             * string - string inp = "Lucky";------> 2 bytes per character
+              */
+            int a = 34;
+            float b = 34.4F;
+            double c = 34.4D;
+            bool isGreat = true;
+            char d = 'r';
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+            Console.WriteLine(c);
+            Console.WriteLine(d);
+            Console.WriteLine(isGreat);
+            string inp = Console.ReadLine();
+            Console.WriteLine(inp);
+            Console.WriteLine("Hello lucky");
+          
+            Console.ReadLine();
+        }
+    }
+}
