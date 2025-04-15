@@ -1,4 +1,8 @@
+using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -6,7 +10,12 @@ using System.Threading.Tasks;
 namespace Hello
 {
     internal class Program
+    { 
+        static void Greet()
     {
+        Console.WriteLine("Good Morning");
+    }
+    
         static void Main(string[] args)
         {
             //  this is important for debugging. do Not remove 
@@ -21,20 +30,193 @@ namespace Hello
              * Boolean - bool inGreaat = true;------> 1 bit
              * string - string inp = "Lucky";------> 2 bytes per character
               */
-            int a = 34;
-            float b = 34.4F;
-            double c = 34.4D;
-            bool isGreat = true;
-            char d = 'r';
-            Console.WriteLine(a);
-            Console.WriteLine(b);
-            Console.WriteLine(c);
-            Console.WriteLine(d);
-            Console.WriteLine(isGreat);
-            string inp = Console.ReadLine();
-            Console.WriteLine(inp);
-            Console.WriteLine("Hello lucky");
-          
+            //int a = 34;
+            // float b = 34.4F;
+            // double c = 34.4D;
+            //  bool isGreat = true;
+            // char d = 'r';
+            // string e = "this is a string";
+            // Console.WriteLine(a);
+            // Console.WriteLine(b);
+            // Console.WriteLine(c);
+            // Console.WriteLine(d);
+            // Console.WriteLine(e);
+            // Console.WriteLine(isGreat);
+            // string inp = Console.ReadLine();
+            // Console.WriteLine(inp);
+            // Console.WriteLine("Hello lucky");
+
+            // 1. implicit Casting
+
+            //2. explicit Casting
+
+            // char to int to long to float to double
+
+            //int x = (int)3.5;
+            // double x1 = (double)3.5;
+            // Console.WriteLine(x1);
+
+            // Console.WriteLine(ax);
+            //Console.WriteLine(x);
+            //Console.WriteLine(y);
+            //Console.WriteLine(z);
+            //Console.WriteLine("Enter Your Nmae");
+            //string name = Console.ReadLine();
+            //Console.WriteLine("Hey Hello" + name);
+
+            //Console.WriteLine("How Many Candies Do You Want?");
+            //string can = Console.ReadLine();
+            //Console.WriteLine("You will get 4 more candies candies"+ 
+            //    (Convert.ToInt32(can) + 4));
+
+
+            /* operators in c#
+
+            1. Arithmetic operators
+            2.Assignment Operators
+            3. Logical operators
+
+
+
+
+                */
+            //int a = 4;
+            //int b = 2;
+            //Console.WriteLine("The value of a + b is:" + (a + b));
+            //Console.WriteLine("The value of a - b is:" + (a - b));
+            //Console.WriteLine("The value of a - b is:" + (a - b));
+            //Console.WriteLine("The value of a / b is:" + (a / b));
+
+            //Assignment Operators
+            //int a = 4;
+            //int b = a;
+            ////b += 4;
+            ////b -= 4;
+            ////b *= 4;
+            //b /= 4;
+            //Console.WriteLine(b);
+
+
+            //Logical Operators
+            //Console.WriteLine(true && false);
+            //Console.WriteLine(true && true);
+            //Console.WriteLine(false && false);
+
+
+            //Console.WriteLine(true || false);
+            //Console.WriteLine(true || true);
+            //Console.WriteLine(false || false);
+            //Console.WriteLine(!false);
+            //Console.WriteLine(!true);
+
+            //Comparison Operators
+            //Console.WriteLine(324 > 555);
+            //Console.WriteLine(324 <= 555);
+            //Console.WriteLine(324 >= 555);
+            //Console.WriteLine(324 != 555);
+            //Console.WriteLine(5 == 5);
+
+            // int a = Math.Max(34, 345);
+
+            //int b = Math.Min(50, 567);
+            //Console.WriteLine(b);
+            //double a = Math.Sqrt(39);
+            //int a = Math.Abs(+39);
+            //Console.WriteLine(a);
+
+            //string hello = "Hello world this is lucky";
+            //Console.WriteLine(hello.Length);
+            //Console.WriteLine(hello.ToUpper());
+            //Console.WriteLine(hello.ToLower());
+            //Console.WriteLine(hello + "You are nice");
+            //Console.WriteLine(string.Concat(hello,  "You are nice"));
+
+            //string name = Console.ReadLine();
+            //string candies = Console.ReadLine();
+            //Console.WriteLine($"your name is {name}.You will get {candies}");
+
+            //string hello = "Hello world this \" is lucky";
+            //// Console.WriteLine(hello[1]);
+            //Console.WriteLine(hello.IndexOf("is"));
+            //Console.WriteLine(hello.Substring(5));
+            //Console.WriteLine(hello);
+            //Console.WriteLine("Enter your age");
+            //string ageStr = Console.ReadLine();
+            //int age = Convert.ToInt32(ageStr);
+            //bool isBanned = true;
+            //    if (age  < 2)
+            //{
+            //    Console.WriteLine("You are just born");
+            //}
+            //    else if (age < 10)
+            //{
+            //    Console.WriteLine("Please finish your high school");
+            //}
+            //else if(age<18)
+            //{
+            //    Console.WriteLine("You are below 18");
+            //}
+            //    else if(age < 75)
+            //{
+            //    Console.WriteLine("You can drive");
+            //}
+            //{
+            //    Console.WriteLine("You cannot drive");
+
+            //}
+
+            //int age = 78;
+            //switch (age)
+            //{
+            //    case 18:
+            //        Console.WriteLine("please wait for an year");
+            //        break;
+            //    case 20:
+            //        Console.WriteLine("You are 20");
+            //        break;
+            //    default:
+            //        Console.WriteLine("Enjoy!");
+            //        break;
+            //}
+
+
+
+            //Loops in C sharp
+            //Console.WriteLine(1);
+            //Console.WriteLine(2);
+            //Console.WriteLine(3);
+            //Console.WriteLine(4);
+            //Console.WriteLine(5);
+
+            //Better Alternative - Loops 
+            //int i = 0;
+            //while (i < 7000)
+            //{
+            //    Console.WriteLine(i+1);
+                    
+            //    i++;
+            //}
+            //Do while loop
+            //int i = 0;
+
+            //do
+            //{
+            //    Console.WriteLine(i + 5);
+
+            //    i++;
+            //} while (i > 10);
+
+            //for (int i=0; i<5; i++)
+            //{
+            //    if (i == 0)
+            //    {
+            //        continue;
+            //    }
+            //    Console.WriteLine(i + 1);
+               // break;
+            
+            Greet();
+            Greet();
             Console.ReadLine();
         }
     }
